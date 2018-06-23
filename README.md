@@ -1,11 +1,11 @@
 # @IvanCampos
 
-[GitHub](https://github.com/IvanCampos)
+## [GitHub](https://github.com/IvanCampos)
 
-[LinkedIn](https://www.linkedin.com/in/ivancampos)
+## [LinkedIn](https://www.linkedin.com/in/ivancampos)
 
-[Twitter](https://twitter.com/ivancampos)
+## [Twitter](https://twitter.com/ivancampos)
 
-[Medium](https://medium.com/@ivancampos/)
+## [Medium](https://medium.com/@ivancampos/)
 
-[IvanCampos.com](http://ivancampos.com)
+## [IvanCampos.com](http://ivancampos.com)
