@@ -1,6 +1,6 @@
 # @IvanCampos
 
-[GitHub](https://github.com/IvanCampos) :octocat:
+[GitHub](https://github.com/IvanCampos)
 
 [LinkedIn](https://www.linkedin.com/in/ivancampos)
 
