@@ -1,9 +1,11 @@
 # @IvanCampos
 
-https://github.com/IvanCampos
+[GitHub](https://github.com/IvanCampos) :octocat:
 
-https://www.linkedin.com/in/ivancampos
+[LinkedIn](https://www.linkedin.com/in/ivancampos)
 
-https://twitter.com/ivancampos
+[Twitter](https://twitter.com/ivancampos)
 
-https://medium.com/@ivancampos/
+[Medium](https://medium.com/@ivancampos/)
+
+[IvanCampos.com](http://ivancampos.com)
