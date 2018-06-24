@@ -1,7 +1,3 @@
-# @IvanCampos
-
----
-
 ## Demos
 ### [d3](https://ivancampos.github.io/d3/)
 ### [font-awesome](https://ivancampos.github.io/font-awesome/)
