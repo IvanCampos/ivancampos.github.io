@@ -3,7 +3,7 @@
 ### [font-awesome](https://ivancampos.github.io/font-awesome/)
 ### [stocks](https://ivancampos.github.io/stocks/)
 ### [AngularJS](https://ivancampos.github.io/ng-demo/)
-### [Baidu ECharts](http://ivancampos.github.io/JavaScripting/Baidu-ECharts/eCharts.html)
+### [Baidu ECharts](http://ivancampos.github.io/JavaScripting/Baidu-ECharts/)
 ### [IvanCampos.com](http://ivancampos.com)
 
 ----
