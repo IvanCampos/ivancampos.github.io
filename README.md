@@ -1,6 +1,7 @@
 ## Demos
 ### [d3](https://ivancampos.github.io/d3/)
 ### [font-awesome](https://ivancampos.github.io/font-awesome/)
+### [stocks](https://ivancampos.github.io/stocks/)
 ### [IvanCampos.com](http://ivancampos.com)
 
 ----
