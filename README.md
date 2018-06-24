@@ -2,7 +2,7 @@
 ### [d3](https://ivancampos.github.io/d3/)
 ### [font-awesome](https://ivancampos.github.io/font-awesome/)
 ### [stocks](https://ivancampos.github.io/stocks/)
-### [AngularJS](https://ivancampos.github.io/ng-demo/)
+### [AngularJS](https://ivancampos.github.io/JavaScripting/ng-demo/)
 ### [Baidu ECharts](http://ivancampos.github.io/JavaScripting/Baidu-ECharts/)
 ### [Meteor](http://ivancampos.com)
 
