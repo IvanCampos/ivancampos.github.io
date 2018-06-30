@@ -22,4 +22,12 @@ https://api.github.com/users/ivancampos/subscriptions
 # Org members
 https://api.github.com/orgs/google/members
 
+# My recent HTML changes
+https://api.github.com/search/code?q=user:ivancampos+in:file+language:html
+
+# My profile info
+https://api.github.com/search/users?q=ivancampos
+
+# Top Boston
+https://api.github.com/search/users?q=location:Boston+followers:%3E1000
 
