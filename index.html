@@ -2,34 +2,57 @@
 <html style="height: 100%">
 <head>
 	<meta charset="utf-8">
+	<script type="text/javascript" src="dist/vendors/jquery/jquery-3.1.1.min.js"></script>
 </head>
-<body style="height: 100%; margin: 0">
-Visualization in progress...
-<div id="container" style="height: 100%"></div>
-<script type="text/javascript" src="dist/vendors/echarts/echarts.min.js"></script>
-<script type="text/javascript" src="dist/vendors/echarts-gl/echarts-gl.min.js"></script>
-<script type="text/javascript" src="dist/vendors/echarts-stat/ecStat.min.js"></script>
-<script type="text/javascript" src="dist/vendors/echarts/extension/dataTool.min.js"></script>
-<script type="text/javascript" src="dist/vendors/echarts/map/js/china.js"></script>
-<script type="text/javascript" src="dist/vendors/echarts/map/js/world.js"></script>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
-<script type="text/javascript" src="dist/vendors/echarts/extension/bmap.min.js"></script>
-<script type="text/javascript" src="dist/vendors/simplex.js"></script>
-<script type="text/javascript" src="dist/vendors/jquery/jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
-    var dom = document.getElementById("container");
-    var myChart = echarts.init(dom);
-    var app = {};
-    option = null;
-    <!-- add demo -->
-    if (option && typeof option === "object") {
-        myChart.setOption(option, true);
-    }
-    $(window).on('resize', function () {
-        if (myChart != null && myChart != undefined) {
-            myChart.resize();
+<body style="height: 100%; margin: 0; padding-left:15px;">
+<h3>Public Repos for Ivan Campos</h3>
+<div id="gallery"></div>
+<div id="profile"></div>
+<script>
+    $.get("https://api.github.com/users/ivancampos/repos", function (data) {
+        for (var i = 0; i < data.length; i++) {
+            var repoName = data[i].name;
+            var homepage = data[i].homepage;
+            var htmlUrl = data[i].html_url;
+            if (homepage != null) {
+                $("#gallery").append("<h4><a href='" + homepage + "'>" + repoName + "</a></h4>");
+            } else {
+                $("#gallery").append("<h4><a href='" + htmlUrl + "'>" + repoName + "</a></h4>");
+			}
         }
+        console.log(JSON.stringify(data[1]));
+
+        var profileDetails = data[1].owner;
+        $("#profile").append("<img src='" + profileDetails.avatar_url + "' height='150' width='150' />");
+
+    }).fail(function () {
+        $("#gallery").append("Github API is currently experiencing issues. Please try again later.");
     });
 </script>
+
+<!--<div id="container" style="height: 100%"></div>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts/echarts.min.js"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts-gl/echarts-gl.min.js"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts-stat/ecStat.min.js"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts/extension/dataTool.min.js"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts/map/js/china.js"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts/map/js/world.js"></script>-->
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/echarts/extension/bmap.min.js"></script>-->
+<!--<script type="text/javascript" src="dist/vendors/simplex.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--var dom = document.getElementById("container");-->
+    <!--var myChart = echarts.init(dom);-->
+    <!--var app = {};-->
+    <!--option = null;-->
+    <!--if (option && typeof option === "object") {-->
+        <!--myChart.setOption(option, true);-->
+    <!--}-->
+    <!--$(window).on('resize', function () {-->
+        <!--if (myChart != null && myChart != undefined) {-->
+            <!--myChart.resize();-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
