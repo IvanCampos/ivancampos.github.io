@@ -20,11 +20,8 @@
                 $("#gallery").append("<h4><a href='" + htmlUrl + "'>" + repoName + "</a></h4>");
 			}
         }
-        console.log(JSON.stringify(data[1]));
-
         var profileDetails = data[1].owner;
         $("#profile").append("<img src='" + profileDetails.avatar_url + "' height='150' width='150' />");
-
     }).fail(function () {
         $("#gallery").append("Github API is currently experiencing issues. Please try again later.");
     });
