@@ -20,14 +20,14 @@
 			grid-template-rows: 6vh 6vh 12vh 12vh 13vh 13vh 12vh 12vh 6vh 6vh;
 			grid-template-areas:
 					"header header header header header header header header header header"
-					"godzilla godzilla . . . . globe globe globe profile"
-					"godzilla godzilla . . . . globe globe globe profile"
-					"godzilla godzilla . . . . globe globe globe ."
-					". . . . . . . . . footer-countdown"
-					"blank blank . . . . api api flights flights"
-					"blank blank . . . . api api flights flights"
-					". . . . . . api api flights flights"
-					". . . . . . api api flights flights"
+					"godzilla godzilla . . . globe globe globe globe profile"
+					"godzilla godzilla . . . globe globe globe globe profile"
+					"godzilla godzilla . . . globe globe globe globe ."
+					"godzilla godzilla . . . globe globe globe globe ."
+					"blank blank blank api api . . . spotify spotify"
+					"blank blank blank api api . . . spotify spotify"
+					"blank blank blank api api . . . . ."
+					". . . api api . . . . ."
 					". . . . footer-dateTime footer-dateTime . . . .";
 			grid-gap: 1px;
 		}
@@ -74,6 +74,11 @@
 
 		.flights {
 			grid-area: flights;
+			background-color: black;
+		}
+
+		.spotify {
+			grid-area: spotify;
 			background-color: black;
 		}
 
@@ -125,32 +130,37 @@
 	<div class="globe">
 		<div class="dark-glass" align="center">
 			<iframe width="100%" height="100%" frameborder="0"
-					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/map-usa
-					.html?=000000"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/transparent-bar3d.html?=000000"
 					allowtransparency="true"></iframe>
 		</div>
 	</div>
-	<div class="flights">
-		<div class="dark-glass" align="center">
-			<iframe height="100%" frameborder="0"
-					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/vertical-github.html?=000000"
-					allowtransparency="true"></iframe>
-		</div>
-	</div>
+	<!--<div class="flights">-->
+		<!--<div class="dark-glass" align="center">-->
+			<!--<iframe height="100%" frameborder="0"-->
+					<!--src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/vertical-github.html?=000000"-->
+					<!--allowtransparency="true"></iframe>-->
+		<!--</div>-->
+	<!--</div>-->
 
-	<div class="footer-countdown dark-glass" align="center" style="padding-top: 10px; color: white;">
-		<div id="demo" style="color:darkgray; font-size: xx-large"></div>
-	</div>
+	<!--<div class="footer-countdown dark-glass" align="center" style="padding-top: 10px;">-->
+		<!--<div id="demo" style="color:orangered; font-size: x-large;"></div>-->
+	<!--</div>-->
+
 	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 17px; color: white;">
 		<div id="time" style="color:darkgray;"></div>
 	</div>
 
 	<div class="blank">
 		<div class="dark-glass" align="center">
+			<!--Z8eKxVCFoUk-->
 			<iframe class="videoContainer__video" width="100%" height="100%"
-					src="https://www.youtube.com/embed/Z8eKxVCFoUk?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1"
+					src="https://www.youtube.com/embed/msUF-nAe9uw?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1"
 					frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 		</div>
+	</div>
+
+	<div class="spotify dark-glass">
+		<iframe src="https://open.spotify.com/embed/user/sopmac21379/playlist/2cU4UQscs3zRy9qduj3BGN" width="270" height="370" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 	</div>
 
 	<div class="api dark-glass" align="center" style="color: white; overflow: scroll;">
@@ -189,13 +199,13 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "NOW";
-        }
+        // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        //     + minutes + "m " + seconds + "s ";
+		//
+        // if (distance < 0) {
+        //     clearInterval(x);
+        //     document.getElementById("demo").innerHTML = "NOW";
+        // }
 
         var now = new Date();
         document.getElementById("time").innerHTML = prependZero(now.getMonth())+"."+prependZero(now.getDay())+"."+now.getFullYear()+"\n"
