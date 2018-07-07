@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layouts</title>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<style>
+		body {
+			background-color: black;
+			font-family: 'Orbitron', sans-serif;
+		}
+
+		.wrapper > div {
+			border: 0px;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 4vh 30vh 60vh 4vh;
+			grid-template-areas:
+					"header header header header header header header header header header"
+					"godzilla godzilla godzilla godzilla godzilla globe globe globe globe globe"
+					"blank blank blank api api api api api flights flights"
+					"footer-countdown footer-countdown footer-countdown footer-countdown footer-countdown footer-dateTime footer-dateTime footer-dateTime footer-dateTime footer-dateTime";
+			grid-gap: 1px;
+		}
+
+		.header {
+			grid-area: header;
+			background-color: black;
+		}
+
+		.blank {
+			grid-area: blank;
+			background-color: black;
+		}
+
+		.footer-countdown {
+			grid-area: footer-countdown;
+			background-color: black;
+		}
+
+		.footer-dateTime {
+			grid-area: footer-dateTime;
+			background-color: black;
+		}
+
+		.godzilla {
+			grid-area: godzilla;
+			background-color: black;
+		}
+
+		.globe {
+			grid-area: globe;
+			background-color: black;
+		}
+
+		.api {
+			grid-area: api;
+			background-color: black;
+		}
+
+		.flights {
+			grid-area: flights;
+			background-color: black;
+		}
+
+		.dark-glass {
+			opacity: 0.92;
+			z-index: 2;
+			height: 100%;
+		}
+
+		.videoContainer {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+
+<div class="videoContainer">
+	<iframe class="videoContainer__video" width="1920" height="1080"
+			src="https://www.youtube.com/embed/msUF-nAe9uw?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1"
+			frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<div class="wrapper">
+	<div class="header dark-glass" style="padding-top:5px;" align="right">
+		<span style="color: dodgerblue; font-size: 50px; font-weight: bolder; font-style: italic;">IC-1979</span>
+	</div>
+	<div class="godzilla">
+		<div class="dark-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/circle-triple.html?=000000"
+					allowtransparency="true"></iframe>
+		</div>
+	</div>
+	<div class="globe">
+		<div class="dark-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/globe-tron.html?=000000"
+					allowtransparency="true"></iframe>
+		</div>
+	</div>
+	<div class="flights">
+		<div class="dark-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/vertical-github.html?=000000"
+					allowtransparency="true"></iframe>
+		</div>
+	</div>
+
+	<div class="footer-countdown dark-glass" align="center" style="padding-top: 10px; color: white;">
+		<div id="demo" style="color:darkred;"></div>
+	</div>
+	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 10px; color: white;">
+		<div id="time" style="color:darkgray;"></div>
+	</div>
+
+	<div class="blank">
+		<div class="dark-glass" align="center">
+			<iframe class="videoContainer__video" width="100%" height="100%"
+					src="https://www.youtube.com/embed/Z8eKxVCFoUk?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1"
+					frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="api dark-glass" align="center" style="padding-top: 10px; color: white;">
+		<h3>Public Repos</h3>
+		<div id="gallery"></div>
+	</div>
+</div>
+
+<script type="text/javascript" src="dist/vendors/jquery/jquery-3.1.1.min.js"></script>
+<script>
+    $.get("https://api.github.com/users/ivancampos/repos", function (data) {
+        for (var i = 0; i < data.length; i++) {
+            var repoName = data[i].name;
+            var homepage = data[i].homepage;
+            var htmlUrl = data[i].html_url;
+            if (homepage != null) {
+                $("#gallery").append("<h4><a href='" + homepage + "'>" + repoName + "</a></h4>");
+            } else {
+                $("#gallery").append("<h4><a href='" + htmlUrl + "'>" + repoName + "</a></h4>");
+            }
+        }
+    }).fail(function () {
+        $("#gallery").append("Github API is currently experiencing issues. Please try again later.");
+    });
+
+    var countDownDate = new Date("Feb 13, 2019 01:42:00").getTime();
+
+    setInterval(function () {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "NOW";
+        }
+
+        var now = new Date();
+        document.getElementById("time").innerHTML = prependZero(now.getMonth())+"."+prependZero(now.getDay())+"."+now.getFullYear()+"\n"
+            +prependZero(now.getHours())+":"+prependZero(now.getMinutes())+":"+prependZero(now.getSeconds());
+    }, 1000);
+
+    function prependZero(number){
+        return number < 10? '0'+number:''+number;
+    }
+</script>
+
+</body>
+</html>
