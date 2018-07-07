@@ -203,7 +203,7 @@
             var htmlUrl = data[i].html_url;
             if (homepage != null) {
                 $("#gallery").append("<h4><a href='" + homepage + "'>" + repoName + "</a></h4>");
-            } else {
+            } else if (!repoName.startsWith("corepro-sdk")) {
                 $("#gallery").append("<h4><a href='" + htmlUrl + "'>" + repoName + "</a></h4>");
             }
         }
