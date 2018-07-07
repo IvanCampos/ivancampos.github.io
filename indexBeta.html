@@ -17,17 +17,28 @@
 		.wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-			grid-template-rows: 4vh 30vh 60vh 4vh;
+			grid-template-rows: 6vh 6vh 12vh 12vh 13vh 13vh 12vh 12vh 6vh 6vh;
 			grid-template-areas:
 					"header header header header header header header header header header"
-					"godzilla godzilla godzilla godzilla godzilla globe globe globe globe globe"
-					"blank blank blank api api api api api flights flights"
-					"footer-countdown footer-countdown footer-countdown footer-countdown footer-countdown footer-dateTime footer-dateTime footer-dateTime footer-dateTime footer-dateTime";
+					"godzilla godzilla . . . . globe globe globe profile"
+					"godzilla godzilla . . . . globe globe globe profile"
+					"godzilla godzilla . . . . globe globe globe ."
+					". . . . . . . . . footer-countdown"
+					"blank blank . . . . api api flights flights"
+					"blank blank . . . . api api flights flights"
+					". . . . . . api api flights flights"
+					". . . . . . api api flights flights"
+					". . . . footer-dateTime footer-dateTime . . . .";
 			grid-gap: 1px;
 		}
 
 		.header {
 			grid-area: header;
+			background-color: black;
+		}
+
+		.profile {
+			grid-area: profile;
 			background-color: black;
 		}
 
@@ -96,35 +107,41 @@
 </div>
 
 <div class="wrapper">
-	<div class="header dark-glass" style="padding-top:5px;" align="right">
-		<span style="color: dodgerblue; font-size: 50px; font-weight: bolder; font-style: italic;">IC-1979</span>
+	<div class="header dark-glass" align="right">
+		<span style="color: dodgerblue; font-size: 50px; font-weight: bolder; font-style: italic;">IC-079</span>
 	</div>
+
+	<div class="profile dark-glass">
+		<img style="opacity: 0.13;" height="100%" width="100%" src="https://avatars3.githubusercontent.com/u/872137?s=460&v=4">
+	</div>
+
 	<div class="godzilla">
-		<div class="dark-glass" align="center">
-			<iframe width="100%" height="100%" frameborder="0"
-					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/circle-triple.html?=000000"
-					allowtransparency="true"></iframe>
-		</div>
-	</div>
-	<div class="globe">
 		<div class="dark-glass" align="center">
 			<iframe width="100%" height="100%" frameborder="0"
 					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/globe-tron.html?=000000"
 					allowtransparency="true"></iframe>
 		</div>
 	</div>
-	<div class="flights">
+	<div class="globe">
 		<div class="dark-glass" align="center">
 			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/map-usa
+					.html?=000000"
+					allowtransparency="true"></iframe>
+		</div>
+	</div>
+	<div class="flights">
+		<div class="dark-glass" align="center">
+			<iframe height="100%" frameborder="0"
 					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/vertical-github.html?=000000"
 					allowtransparency="true"></iframe>
 		</div>
 	</div>
 
 	<div class="footer-countdown dark-glass" align="center" style="padding-top: 10px; color: white;">
-		<div id="demo" style="color:darkred;"></div>
+		<div id="demo" style="color:darkgray; font-size: xx-large"></div>
 	</div>
-	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 10px; color: white;">
+	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 17px; color: white;">
 		<div id="time" style="color:darkgray;"></div>
 	</div>
 
@@ -136,9 +153,9 @@
 		</div>
 	</div>
 
-	<div class="api dark-glass" align="center" style="padding-top: 10px; color: white;">
-		<h3>Public Repos</h3>
-		<div id="gallery"></div>
+	<div class="api dark-glass" align="center" style="color: white; overflow: scroll;">
+		<h3>PUBLIC REPOS</h3>
+		<div id="gallery" style="font-size: 12px"></div>
 	</div>
 </div>
 
