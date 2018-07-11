@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ivan Campos Home</title>
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+	<style>
+		body {
+			background-color: black;
+			font-family: 'Orbitron', sans-serif;
+		}
+		
+		iframe {
+    			overflow:hidden;
+		}
+		a:link {
+			text-decoration: none;
+			color: dodgerblue;
+		}
+		a:visited {
+			text-decoration: none;
+			color: darkgrey;
+		}
+		.wrapper > div {
+			border: 0px;
+		}
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-rows: 6vh 6vh 12vh 12vh 13vh 13vh 12vh 12vh 6vh 6vh;
+			grid-template-areas:
+					"header header header header header header header header header header"
+					"godzilla godzilla . . . globe globe globe globe profile"
+					"godzilla godzilla . . . globe globe globe globe profile"
+					"godzilla godzilla . . . globe globe globe globe ."
+					"godzilla godzilla . . . globe globe globe globe ."
+					"blank blank blank api api . equinox equinox equinox equinox"
+					"blank blank blank api api . equinox equinox equinox equinox"
+					"blank blank blank api api . equinox equinox equinox equinox"
+					". . . api api . equinox equinox equinox equinox"
+					"sopmac sopmac sopmac sopmac footer-dateTime footer-dateTime equinox equinox equinox equinox";
+			grid-gap: 1px;
+		}
+		.header {
+			grid-area: header;
+			background-color: black;
+		}
+		.sopmac {
+			grid-area: sopmac;
+			background-color: black;
+		}
+		.profile {
+			grid-area: profile;
+			background-color: black;
+		}
+		.blank {
+			grid-area: blank;
+			background-color: black;
+		}
+		.footer-countdown {
+			grid-area: footer-countdown;
+			background-color: black;
+		}
+		.footer-dateTime {
+			grid-area: footer-dateTime;
+			background-color: black;
+		}
+		.godzilla {
+			grid-area: godzilla;
+			background-color: black;
+		}
+		.globe {
+			grid-area: globe;
+			background-color: black;
+		}
+		.equinox {
+			grid-area: equinox;
+			background-color: black;
+		}
+		.api {
+			grid-area: api;
+			background-color: black;
+		}
+		/*.spotify {*/
+			/*grid-area: spotify;*/
+			/*background-color: black;*/
+		/*}*/
+		.dark-glass {
+			opacity: 0.92;
+			z-index: 2;
+			height: 100%;
+		}
+		.light-glass {
+			opacity: 0.65;
+			z-index: 2;
+			height: 100%;
+		}
+		.videoContainer {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="videoContainer">
+	<iframe class="videoContainer__video" width="100%" height="100%"
+			src="https://www.youtube.com/embed/msUF-nAe9uw?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1&loop=1"
+			frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<div class="wrapper">
+	<div class="header dark-glass" align="right">
+		<span style="color: dodgerblue; font-size: 2em; font-weight: bolder; font-style: italic;">IC-79</span>
+	</div>
+
+	<div class="sopmac dark-glass">
+		<span style="color: #191919; font-size: 2em; font-weight: bolder; font-style: italic; left: 0; bottom: 0; position: absolute;">SOPMAC</span>
+	</div>
+
+	<div class="profile dark-glass">
+		<img style="opacity: 0.13;" height="100%" width="100%" src="https://avatars3.githubusercontent.com/u/872137?s=460&v=4">
+	</div>
+
+	<div class="godzilla">
+		<div class="light-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/globe-tron.html?=000000"
+					allowtransparency="true" scrolling="no"></iframe>
+		</div>
+	</div>
+	<div class="globe">
+		<div class="dark-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/gitHistogram.html?=000000"
+					allowtransparency="true" scrolling="no"></iframe>
+		</div>
+	</div>
+	<div class="equinox">
+		<div class="light-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/bar3d-music-visualization.html?=000000"
+					allowtransparency="true" scrolling="no"></iframe>
+		</div>
+	</div>
+
+	<!--<div class="footer-countdown dark-glass" align="center" style="padding-top: 10px;">-->
+	<!--<div id="demo" style="color:orangered; font-size: x-large;"></div>-->
+	<!--</div>-->
+
+	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 1em; color: white;">
+		<div id="time" style="color:darkgray;"></div>
+	</div>
+
+	<div class="blank">
+		<div class="light-glass" align="center">
+			<iframe class="videoContainer__video" width="100%" height="100%" scrolling="no"
+					src="https://www.youtube.com/embed/msUF-nAe9uw?rel=0&amp;controls=0&amp;showinfo=0&autoplay=1&mute=1&loop=1"
+					frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<!--<div class="spotify dark-glass">-->
+		<!--<iframe src="https://open.spotify.com/embed/user/sopmac21379/playlist/2cU4UQscs3zRy9qduj3BGN" width="270" height="375" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>-->
+	<!--</div>-->
+
+	<div class="api dark-glass" align="center" style="color: white; overflow: hidden;">
+		<h3>PUBLIC REPOS</h3>
+		<div id="gallery" style="font-size: 1em"></div>
+	</div>
+</div>
+
+<script>
+    $.get("https://api.github.com/users/ivancampos/repos", function (data) {
+        for (var i = 0; i < data.length; i++) {
+            var repoName = data[i].name;
+            var homepage = data[i].homepage;
+            var htmlUrl = data[i].html_url;
+            if (homepage != null) {
+                $("#gallery").append("<h4><a href='" + homepage + "'>" + repoName + "</a></h4>");
+            } else if (!repoName.startsWith("corepro-sdk")) {
+                $("#gallery").append("<h4><a href='" + htmlUrl + "'>" + repoName + "</a></h4>");
+            }
+        }
+    }).fail(function () {
+        $("#gallery").append("Github API is currently experiencing issues. Please try again later.");
+    });
+    var countDownDate = new Date("Feb 13, 2019 01:42:00").getTime();
+    setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        //     + minutes + "m " + seconds + "s ";
+        //
+        // if (distance < 0) {
+        //     clearInterval(x);
+        //     document.getElementById("demo").innerHTML = "NOW";
+        // }
+        var now = new Date();
+        document.getElementById("time").innerHTML = prependZero(now.getMonth())+"."+prependZero(now.getDate())+"."+now.getFullYear()+"\n"
+            +prependZero(now.getHours())+":"+prependZero(now.getMinutes())+":"+prependZero(now.getSeconds());
+    }, 1000);
+    function prependZero(number){
+        return number < 10? '0'+number:''+number;
+    }
+</script>
+
+</body>
+</html>
