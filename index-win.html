@@ -28,13 +28,13 @@
 		.wrapper {
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-			grid-template-rows: 6vh 6vh 12vh 12vh 14vh 14vh 12vh 12vh 6vh 6vh;
+			grid-template-rows: 6vh 6vh 12vh 12vh 13vh 13vh 12vh 12vh 6vh 6vh;
 			grid-template-areas:
 					"header header header header header header header header header header"
-					"godzilla godzilla . . . globe globe globe globe profile"
-					"godzilla godzilla . . . globe globe globe globe profile"
-					"godzilla godzilla . . . globe globe globe globe ."
-					"godzilla godzilla . . . globe globe globe globe ."
+					"godzilla godzilla usa usa usa globe globe globe globe profile"
+					"godzilla godzilla usa usa usa globe globe globe globe profile"
+					"godzilla godzilla usa usa usa globe globe globe globe ."
+					"godzilla godzilla usa usa usa globe globe globe globe ."
 					"blank blank blank api api . equinox equinox equinox equinox"
 					"blank blank blank api api . equinox equinox equinox equinox"
 					"blank blank blank api api . equinox equinox equinox equinox"
@@ -72,6 +72,10 @@
 		}
 		.equinox {
 			grid-area: equinox;
+			background-color: black;
+		}
+		.usa {
+			grid-area: usa;
 			background-color: black;
 		}
 		.api {
@@ -114,11 +118,11 @@
 
 <div class="wrapper">
 	<div class="header dark-glass" align="right">
-		<span style="color: dodgerblue; font-size: 3em; font-weight: bolder; font-style: italic;">IC-79</span>
+		<span style="color: dodgerblue; font-size: 3em; font-weight: bolder; font-style: italic; padding-top: 0.2em;">IC-79</span>
 	</div>
 
 	<div class="sopmac dark-glass">
-		<span style="color: #191919; font-size: 2em; font-weight: bolder; font-style: italic; position: absolute; padding-top: 1px;">SOPMAC</span>
+		<span style="color: #191919; font-size: 2em; font-weight: bolder; font-style: italic; position: absolute; padding-top: 0.2em;">SOPMAC</span>
 	</div>
 
 	<div class="profile dark-glass">
@@ -139,6 +143,13 @@
 					allowtransparency="true" scrolling="no"></iframe>
 		</div>
 	</div>
+	<div class="usa">
+		<div class="light-glass" align="center">
+			<iframe width="100%" height="100%" frameborder="0"
+					src="https://ivancampos.github.io/JavaScripting/Baidu-ECharts/map-usa-tron-MI.html?=000000"
+					allowtransparency="true" scrolling="no"></iframe>
+		</div>
+	</div>
 	<div class="equinox">
 		<div class="light-glass" align="center">
 			<iframe width="100%" height="100%" frameborder="0"
@@ -147,7 +158,7 @@
 		</div>
 	</div>
 
-	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 0.5em; color: white;">
+	<div class="footer-dateTime dark-glass" align="center" style="padding-top: 0.75em; color: white;">
 		<div id="time" style="color:darkgray;"></div>
 	</div>
 
