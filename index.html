@@ -138,7 +138,7 @@
 <script>
     setInterval(function () {
         var now = new Date();
-        document.getElementById("time").innerHTML = prependZero(now.getMonth())+"."+prependZero(now.getDate())+"."+now.getFullYear()+"\n"
+        document.getElementById("time").innerHTML = prependZero(now.getMonth()+1)+"."+prependZero(now.getDate())+"."+now.getFullYear()+"\n"
             +prependZero(now.getHours())+":"+prependZero(now.getMinutes())+":"+prependZero(now.getSeconds());
     }, 1000);
 
